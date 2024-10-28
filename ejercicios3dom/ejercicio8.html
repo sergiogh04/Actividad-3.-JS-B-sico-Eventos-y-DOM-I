@@ -1,0 +1,53 @@
+<!--En esta página existen tres bloques ocultos. Debes crear un evento de teclado para que
+actúe cuando el usuario pulsa una etcla. si pulsa la tecla 1 se abre el bloque con id ficha1,
+si pulsa 2 se abre el bloque ficha2 y si 3 se abre el de ficha3.
+Los bloques no se ven hasta que se pulsa la tecla de cada uno. Solo hay un bloque visible
+cada vez. Puedes usar las clases definidas y el objeto classList.
+<head>
+<style>
+.oculto{ display: none}
+.visible {display:baock}
+</style>
+</head>
+<body>
+<div class="oculto" id="ficha1">
+Hola, soy el bloque 1</div>
+<div class="oculto" id="ficha2">
+Hola, soy el bloque 2</div>
+<div class="oculto" id="ficha3">
+Hola, soy el bloque 3</div>
+</body>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .oculto { display: none; }
+        .visible { display: block; }
+    </style>
+</head>
+<body>
+    
+    <div class="oculto" id="ficha1">Hola, soy el bloque 1</div>
+    <div class="oculto" id="ficha2">Hola, soy el bloque 2</div>
+    <div class="oculto" id="ficha3">Hola, soy el bloque 3</div>
+  
+    <script>
+
+        document.onkeydown = function(event) {
+          document.getElementById('ficha1').className = 'oculto';
+          document.getElementById('ficha2').className = 'oculto';
+          document.getElementById('ficha3').className = 'oculto';
+      
+          if (event.key === '1' || event.key === '2' || event.key === '3') {
+            document.getElementById('ficha' + event.key).className = 'visible';
+          }
+        };
+
+      </script>
+    
+</body>
+</html>

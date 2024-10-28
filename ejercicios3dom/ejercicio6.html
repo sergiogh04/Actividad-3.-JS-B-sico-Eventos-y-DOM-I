@@ -1,0 +1,34 @@
+<!--La página descrita con este código HTML posee dos bloques div cuyos atributos id
+son cX, cY. Debes escribir un manejador para el evento de movimiento del ratón por el
+documento. Este script deberá anotar en los cuadros cX y cY las coordenadas donde se
+encuentra el puntero del ratón mientras se mueve por todo el documento.
+A medida que se mueve el ratón en los cuadros aparecerá la posición x e y del ratón
+medidas respeto a la pantalla (screen) del navegador, o sea, cX distancia horizontal a la
+esquina superior izquierda y cY distancia vertical a la esquina superior derecha.
+<label>Coordenada X</label>
+<input id="cX"> </div>
+<label>Coordenada Y</label>
+<input id="cY"> </div>
+</body>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Coordenada X</label>
+  <input id="cX">
+  <label>Coordenada Y</label>
+  <input id="cY">
+  <script>
+   
+   
+    document.onmousemove = function(event) {
+      document.getElementById('cX').value = event.screenX;
+      document.getElementById('cY').value = event.screenY;
+    };
+  </script>
+</body>
+</html>

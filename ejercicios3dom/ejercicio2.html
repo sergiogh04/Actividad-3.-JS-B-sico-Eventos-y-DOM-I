@@ -1,0 +1,25 @@
+<!--Necesitas una página web con dos bloques div. El primer bloque contiene el texto "Pasa
+por aqui" y el segundo "Efectos del movimiento" con un argumento id = "efecto". Cuando
+el ratón pase por el primer bloque se llamará a la función color que cambia el fondo del
+segundo bloque a color verde (backgroundColo: green")
+Recuerda que los nodos se pueden seleccionar con getElementById(). Usa estilos en línea
+(style)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onmouseover="color()" style="display: block; width: 100px; height: 100px;">
+        Pasa por aquí
+      </div>
+      <div id="efecto" style="display: block; width: 100px; height: 100px;">
+    <script>
+    function color() {
+        document.getElementById('efecto').style.backgroundColor = 'green';
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--En esta página web debes agregar un script para asignar un manejador de eventos al
+botón button. Este script deberá escribir en el campo total el valor de multiplicar los otros
+dos campos.
+La página mostrará el formulario, si se escribe 5 y 8 al pulsar sobre el botón de calcular
+aparecerá 40 en el campo total. Coloca el script al final del body.
+<form>
+<input id="precio" type="number">
+<input id="cantidad" type="number">
+<input type="button" id="enviar" value="Calcular">
+<input id="total" readonly>
+</form>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+      <input id="precio" type="number">
+      <input id="cantidad" type="number">
+      <input type="button" id="enviar" value="Calcular">
+      <input id="total" readonly>
+    </form>
+  
+    <script>
+        
+        document.getElementById('enviar').onclick = function() {
+         
+          const precio = Number(document.getElementById('precio').value);
+          const cantidad = Number(document.getElementById('cantidad').value);
+          const total = precio * cantidad;
+      
+          document.getElementById('total').value = total;
+        };
+      </script>
+  </body>
+</html>
